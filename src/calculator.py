@@ -1,3 +1,4 @@
 def divide(a,b) : 
-    return a/b if b!=0 else 0 # BUG:πρέπει να σηκώνει ZeroDivisionError
-    
+    if b==0 :
+        raise ZeroDevisionError("Cannot divide by zero")
+        return a/b
