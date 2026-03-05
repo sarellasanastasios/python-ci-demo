@@ -23,6 +23,10 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Add project to PYTHONPATH
+        run: echo "PYTHONPATH=$PYTHANPATH:$(pwd)" >> $GITHUB_ENV
+
+
       - name: Run tests
         run: pytest
 
@@ -43,4 +47,5 @@ jobs:
 
 
           
+
 
